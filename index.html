@@ -1,0 +1,53 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="The best free flappy bird clone out there! Play against an AI and try to beat it." />
+    <meta name="author" content="Maxovic Steiner <maxovicsteiner@gmail.com>" />
+    <meta name="keywords" content="Flappy bird, flappy proto, flappy bird clone, ai flappy bird, best flappy bird clone" />
+    <script src="game.js" defer></script>
+    <script src="cmp/index.js" defer></script>
+    <link rel="stylesheet" href="styles.css" />
+    <title>Flappy Bird</title>
+  </head>
+  <body>
+    <div class="scores">
+      <div class="player">
+        <h1>Player</h1>
+        <h2 id="score"></h2>
+        <h2 id="high_score"></h2>
+      </div>
+      <div class="cmp_player">
+        <h1>CMP</h1>
+        <h2 id="cmp_score"></h2>
+        <h2 id="cmp_high_score"></h2>
+      </div>
+      <button id="restart">Restart</button>
+    </div>
+    <div id="game">
+      <div id="pipes"></div>
+    </div>
+	<script type="text/javascript">
+	atOptions = {
+		'key' : '8b9dde6893d6567021bbb08a45316f4e',
+		'format' : 'iframe',
+		'height' : 250,
+		'width' : 300,
+		'params' : {}
+	};
+	document.write('<scr' + 'ipt type="text/javascript" src="//www.topcreativeformat.com/8b9dde6893d6567021bbb08a45316f4e/invoke.js"></scr' + 'ipt>');
+</script>
+  </body>
+  <script>
+    const restartBtn = document.getElementById("restart");
+
+    restartBtn.addEventListener("click", () => {
+      birdA.kill();
+      birdB.kill();
+      start();
+    });
+  </script>
+</html>

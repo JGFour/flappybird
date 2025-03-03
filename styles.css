@@ -1,0 +1,103 @@
+
+* {
+  user-select: none;
+}
+
+.bird {
+  height: 40px;
+  width: 60px;
+  position: absolute;
+  background-image: url("./assets/flappy-bird.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: 999;
+}
+
+.cmp {
+  filter: grayscale(100%);
+  opacity: 0.5;
+}
+
+.pipe {
+  display: flex;
+  flex-direction: column;
+  width: 100px;
+  background-color: transparent;
+  height: max-content;
+  position: absolute;
+}
+
+.pipe > div.collision {
+  background-color: rgb(41, 85, 41);
+  width: 100%;
+  height: 500px;
+}
+
+.pipe > div.passage {
+  height: 150px;
+  width: 100%;
+  background-color: transparent;
+}
+
+.debug {
+  width: 10px;
+  height: 10px;
+  background-color: red;
+  position: absolute;
+}
+
+#game {
+  overflow: hidden;
+  width: 1000px;
+  height: 500px;
+  border: 1px solid lightblue;
+  border-bottom: 100px solid lightgreen;
+  background-color: lightblue;
+  position: relative;
+}
+
+#pipes {
+  height: 100%;
+  width: max-content;
+  display: flex;
+  gap: 200px;
+  display: relative;
+}
+
+#score::before {
+  content: "Current:";
+}
+
+#high_score::before {
+  content: "Highest:";
+}
+
+#cmp_score::before {
+  content: "Current:";
+}
+
+#cmp_high_score::before {
+  content: "Highest:"
+}
+
+
+h2 {
+  font-family: monospace;
+}
+
+.scores {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+h1 {
+  font-family: monospace;
+  color: red;
+}
+
+#restart {
+  height: max-content;
+  font-size: 1.3rem;
+}
